@@ -4,6 +4,8 @@ How to call a function from a Windows 64-bit DLL with Panama
 This simple example demonstrates how to access a function from a 64-bit
 Windows DLL with the Foreign Linker API.
 
+A great collection of Foreign Linker API usage examples can be found in the [sundararajana/panama-jextract-samples](https://github.com/sundararajana/panama-jextract-samples) repository.
+
 # Compile the DLL
 
 One way to compile the DLL is to use Visual Studio C++.
