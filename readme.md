@@ -10,8 +10,8 @@ One way to compile the DLL is to use Visual Studio C++.
 The [community edition of Visual Studio C++](https://visualstudio.microsoft.com/de/vs/features/cplusplus/) is sufficient for this.
 
 Open the Visual Studio C++ solution in the `helloworld_dll` folder and 
-build the solution with target `x64`.
-
+build the solution with target `x64`. After building the project copy the resulting
+`helloworld.dll` from the `helloworld_dll/x64/Debug` folder to project root.
 
 # Setup Panama JDK
 ```
