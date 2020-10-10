@@ -4,7 +4,7 @@ How to call a function from a Windows 64-bit DLL with Panama
 This simple example demonstrates how to access a function from a 64-bit
 Windows DLL with the Foreign Linker API.
 
-# Compile DLL
+# Compile the DLL
 
 One way to compile the DLL is to use Visual Studio C++.
 The [community edition of Visual Studio C++](https://visualstudio.microsoft.com/de/vs/features/cplusplus/) is sufficient for this.
@@ -19,7 +19,13 @@ set JAVA_HOME=c:\Users\tom\dev\tools\java\jdk-16-panama
 set PATH=%JAVA_HOME%\bin;%PATH%
 ```
 
-# Generate Foreign Wrapper classes
+# Generate Foreign Wrapper Classes with jextract
+
+`jextract` analyses given c-header files and generates bootstrap and wrapper classes 
+that can be used by Java code to use exported symbols (e.g. calling functions) from a DLL.
+
+We use the following command to generate our wrapper classes:
+
 ```
 jextract -d target/classes ^
          -t hello ^
@@ -34,7 +40,7 @@ javac -cp target/classes ^
       src\main\java\HelloPanama.java
 ```
 
-# Run
+# Run the Example App
 ```
 java -cp target\classes ^
      -Dforeign.restricted=permit ^
